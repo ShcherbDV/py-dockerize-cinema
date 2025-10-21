@@ -24,7 +24,7 @@ RUN adduser \
     --no-create-home \
     my_user
 
-RUN chown -R my_user /files
-RUN chmod -R 755 /files
+RUN chown -R my_user:my_user app/files
+RUN chmod -R 755 app/files
 
 USER my_user
